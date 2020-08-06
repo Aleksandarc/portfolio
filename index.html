@@ -8,6 +8,7 @@
   <meta name="author" content="Aleksandar Cernjev">
   <meta name="description" content="Web developer porfolio">
   <link rel="stylesheet" href="./css/style.css">
+
   <link rel="shortcut icon" href="./img/logo.svg" />
 </head>
 
@@ -15,7 +16,7 @@
   <div class="top-navbar">
     <div class="logo"><a href="#">AC</a></div>
     <ul class="navbar-list">
-      <li><a href="#">Porfolio</a></li>
+      <li><a href="#">Projekti</a></li>
       <li><a href="#">O meni</a></li>
       <li><a href="#">Kontakt</a></li>
     </ul>
@@ -34,41 +35,96 @@
   </div>
 
   <div class="mainProject">
-    <h2 class="title">Projekti</h2>
+    <h2 class="catTitle">Projekti</h2>
     <div class="projectContainer">
       <div class="projectCard">
-        <img src="./img/project1.png" alt="project1" class="projectImg">
-        <div class="projectCardLinks">
-          <a href="./PracticeProjects/FrontEnd/Proj1/index.html">Projekat</a>
-          <a href="#">Github</a>
+        <div class="cardTop">
+          <img src="./img/mojKompjuterProj.png" alt="project1" class="projectImg">
+          <div class="projectCardLinks">
+            <a href="https://moj-kompjuter.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/Aleksandarc/mojKompjuter" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
         </div>
+        <p class="projectInfoTitle">Seminarski rad web prodavnice.</p>
+        <p class="projectInfo">Rad iz predmeta Napredni Web Dizajn. Automatski generise stranice za sve
+          proizvode. Poseduje admin stranicu gde je moguć CRUD korisnika i proizvoda.</p>
+        <p class="projectLanguages">HTML CSS JS PHP i SQL</p>
+      </div>
+
+      <div class="projectCard">
+        <div class="cardTop">
+          <img src="./img/project1.png" alt="project1" class="projectImg">
+          <div class="projectCardLinks">
+            <a href="./PracticeProjects/FrontEnd/Proj1/proj1.html"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/Aleksandarc/portfolio/tree/master/PracticeProjects/FrontEnd/Proj1"
+              target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="projectInfoTitle">Projekat za licnu vezbu</p>
+        <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
+        <p class="projectLanguages">HTML CSS JS</p>
       </div>
       <div class="projectCard">
-        <img src="./img/project1.png" alt="project1" class="projectImg">
-        <div class="projectCardLinks">
-          <a href="./PracticeProjects/FrontEnd/Proj1/index.html">Projekat</a>
-          <a href="#">Github</a>
+        <div class="cardTop">
+          <img src="./img/project1.png" alt="project1" class="projectImg">
+          <div class="projectCardLinks">
+            <a href="./PracticeProjects/FrontEnd/Proj1/proj1.html"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/Aleksandarc/portfolio/tree/master/PracticeProjects/FrontEnd/Proj1"
+              target="_blank"><i class="fab fa-github"></i></a>
+          </div>
         </div>
-      </div>
-      <div class="projectCard">
-        <img src="./img/project1.png" alt="project1" class="projectImg">
-        <div class="projectCardLinks">
-          <a href="./PracticeProjects/FrontEnd/Proj1/index.html">Projekat</a>
-          <a href="#">Github</a>
-        </div>
-      </div>
-      <div class="projectCard">
-        <img src="./img/project1.png" alt="project1" class="projectImg">
-        <div class="projectCardLinks">
-          <a href="./PracticeProjects/FrontEnd/Proj1/index.html">Projekat</a>
-          <a href="#">Github</a>
-        </div>
+        <p class="projectInfoTitle">Projekat za licnu vezbu</p>
+        <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
+        <p class="projectLanguages">HTML CSS JS</p>
       </div>
     </div>
   </div>
+
+  <div class="mainOmeni">
+    <h2 class="catTitle">O meni</h2>
+    <div class="oMeniContainer">
+      <div class="oMeniInfo">
+        <p class="oMeniInfoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatem at cupiditate?
+          Alias
+          nam natus eos esse<br>
+          est rerum, excepturi, dolores corporis voluptatibus, dignissimos assumenda repellendus eveniet rem sapiente
+          minus culpa inventore. Ullam perferendis necessitatibus, placeat, voluptates nisi quas, quod atque
+          dolores
+          nam<br>
+          voluptatem earum repellat dolore soluta magnam et.Ovo su tehnologije koje poznajem: </p>
+        <p class="oMeniInfoText">
+          <ul class="languageList">
+            <li>JavaScript</li>
+            <li>HTML & CSS</li>
+            <li>PHP</li>
+            <li>WordPress</li>
+          </ul>
+        </p>
+      </div>
+      <div class="oMeniFoto"><img src="https://via.placeholder.com/250" alt="Licna fotografija"></div>
+    </div>
+  </div>
+
+  <div class="mainKontakt">
+    <h2 class="catTitle">Kontakt</h2>
+    <div class="kontaktContainer">
+      <h3 class="catSubTitle">Kontaktirajte me</h3>
+      <p class="kontaktInfo">Ukoliko ste zaintresovani u saradnju moji, kontakt linkovi su:</p>
+      <div class="contactLinks">
+        <a href="#"><i class="fab fa-linkedin-in"></i>Aleksandar Černjev</a>
+        <a href="mailto:aleksandarcernjev@gmail.com"><i class="fas fa-envelope"></i>aleksandarcernjev@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+
   <div class="returnToTheTop">
     <img src="./img/returnToTop.svg" alt="Return to Top">
   </div>
+  <footer>
+    <p><a href="https://github.com/Aleksandarc">Designed & Build by Aleksandar Černjev</a></p>
+  </footer>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="./js/app.js"></script>
 </body>
 
