@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Poppins:wght@600&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
 }
 
 .container {
@@ -10,53 +13,273 @@
   margin: 0 auto;
 }
 
-/* ------------- NAVBAR -------------*/
+body {
+  background-color: #eee;
+}
 
+.returnToTheTop {
+  display: flex;
+  width: 1vw;
+  height: 1vw;
+  position: fixed;
+  z-index: 2;
+  right: 2%;
+  bottom: 5%;
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 1rem;
+  box-shadow: .2vw .2vw .2vw rgba(0, 0, 0, .2);
+  cursor: pointer;
+}
+
+.returnToTheTop:hover {
+  background-color: #555;
+}
+
+.returnToTheTop img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------- NAVBAR -------------*/
 .top-navbar {
+  background-color: #3C3744;
+  height: auto;
+  color: #fff;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  padding: .2rem 1rem;
-  color: #fff;
-  flex: auto;
-  background-color: #24292E;
+  padding: .2rem 15%;
+  z-index: 100;
 }
 
-.logo-navbar a {
+.top-navbar a {
+  font-size: 2.5rem;
+  color: #fff;
   text-decoration: none;
-  color: #fff;
-  font-weight: 700;
+  font-family: 'Mukta', sans-serif;
+  border-radius: 1.5rem;
+  padding: .2rem;
 }
 
-.navbar-list,
-.navbar-list li a {
+.navbar-list a:hover {
+  background-color: #FF333A;
+  border-radius: 2rem;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.navbar-list {
   list-style: none;
-  text-decoration: none;
-  color: #fff;
-  transition: all .1s ease-in;
-  font-weight: 500;
-}
-
-.navbar-list li a:hover {
-  color: #ccc;
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar-list li {
-  display: inline;
-  margin: 0 .5rem;
+  margin: 0 2rem;
+  font-weight: 600;
 }
 
-.activeNav {
-  border-bottom: 2px solid rgb(50, 110, 240);
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.homeContainer {
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homeContainer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.homeLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.homeRight {
+  flex: 1;
+  pointer-events: none;
+}
+
+
+.homeRight img {
+  width: 100%;
+}
+
+.homeText {
+  font-size: 3vw;
+  margin: .5rem 0;
+  font-family: 'Mukta', sans-serif;
+}
+
+.homeTextName {
+  position: relative;
+  font-family: 'Mukta', sans-serif;
+}
+
+.homeTextName::before {
+  position: absolute;
+  content: '';
+  width: 70%;
+  height: .5vh;
+  background-color: #3D52D5;
+  border-radius: 2rem;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.homeTextBtn {
+  font-size: 2.5vw;
+  text-align: center;
+  background-color: #FF333A;
+  border-radius: 2rem;
+  width: 50%;
+  padding: 2rem;
+  margin-top: 4rem;
+  transition: all .25s ease-out;
+}
+
+.homeTextBtn:hover {
+  background-color: #9e1f24;
 }
 
 /* ------------- NAVBAR -------------*/
+/* ------------- portfolio -------------*/
+
 .btnRound {
   padding: .7rem;
   border-radius: 2rem;
   background-color: rgb(35, 80, 180);
   color: #fff;
+}
+
+.mainProject {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.projectImg {
+  width: 100%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  flex: 1;
+}
+
+.projectContainer {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  border-radius: 1.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-shadow:
+    0rem 2rem 2rem .1rem rgba(0, 0, 0, .1),
+    0rem 1rem 1rem 0rem rgba(0, 0, 0, .5);
+}
+
+.projectCardLinks {
+  font-size: 3rem;
+  font-weight: 500;
+  flex: 1;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.projectCardLinks a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 2rem;
+  text-align: center;
+}
+
+.projectCardLinks a:hover {
+  color: #999;
+}
+
+@media only screen and (max-width:1200px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {
+  .top-navbar {
+    padding: .2rem 5%;
+  }
+
+  .top-navbar a {
+    font-size: 1.5rem;
+  }
+
+  .returnToTheTop {
+    display: none;
+  }
+
+  .homeContainer {
+    width: 90%;
+  }
+
+  .homeTextBtn {
+    padding: 1rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .projectContainer {
+    width: 90%;
+  }
+
+
+  .indexHeaderName {
+    font-size: 5rem;
+  }
+
+  .indexHeaderText {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* ------------- portfolio -------------*/
+.scroll {
+  font-size: 3rem;
+  width: 10%;
+  margin: 0 auto;
+  color: #000;
 }
