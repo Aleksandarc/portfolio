@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&family=Poppins:wght@400;600&display=swap');
 
 * {
   padding: 0;
@@ -6,11 +6,6 @@
   box-sizing: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 62.5%;
-}
-
-.container {
-  width: 75%;
-  margin: 0 auto;
 }
 
 .returnToTheTop {
@@ -37,48 +32,65 @@
   height: 100%;
 }
 
+.topPos {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.mains {
+  scroll-snap-align: center;
+}
+
 /* ------------- NAVBAR -------------*/
-.top-navbar {
-  background-color: #3C3744;
+.topNavbar {
+  position: fixed;
+  width: 100%;
+
+  background-color: rgba(60, 55, 68, .8);
   color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 15%;
+  padding: .5rem 0;
   z-index: 100;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-.top-navbar a {
-  font-size: 2.5rem;
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Mukta', sans-serif;
-  border-radius: 1.5rem;
-  padding: .3rem;
-}
-
-.navbar-list a:hover {
-  background-color: #FF333A;
-  border-radius: 2rem;
+  transition: all .25s ease-out;
 }
 
 .logo {
-  font-weight: 600;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 15%;
 }
 
 .navbar-list {
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin-right: 15%;
 }
 
-.navbar-list li {
+.navLinks {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
   margin: 0 2rem;
-  font-weight: 600;
+  transition: all .2s ease-out;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+.navLinks:hover {
+  background-color: #FF333A;
+  border-radius: 2rem;
 }
 
 .home {
@@ -157,6 +169,7 @@
 
 .homeTextBtn:hover {
   background-color: #9e1f24;
+  transform: translateY(-10px);
 }
 
 /* ------------- NAVBAR -------------*/
@@ -202,7 +215,7 @@
 .projectImg {
   width: 100%;
   border-top-left-radius: 1.5rem;
-  /* border-top-right-radius: 1.5rem; */
+  border-top-right-radius: 1.5rem;
   flex: 1;
   pointer-events: none;
 }
@@ -316,14 +329,15 @@
 }
 
 .oMeniInfoText {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
   font-family: 'Poppins', sans-serif;
-  flex: 2;
+  flex: 1;
   margin-bottom: 1rem;
   width: 60%;
+  text-align: justify;
 }
 
 .languageList {
@@ -334,9 +348,9 @@
 }
 
 .languageList li {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 1rem 1rem 1rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .languageList li::before {
@@ -345,10 +359,40 @@
   font-family: sans-serif;
 }
 
-.oMeniContainer img {
+.oMeniFoto {
   width: 100%;
-  border-radius: 50%;
   flex: 1;
+  /* pointer-events: none; */
+  position: relative;
+  padding: .2rem;
+}
+
+.oMeniFoto img {
+  filter: grayscale(100);
+  transition: all .25s ease-out;
+}
+
+.oMeniFoto img:hover {
+  filter: grayscale(0);
+}
+
+.oMeniFoto:hover::before {
+  top: 1rem;
+  left: 1rem;
+  right: -1rem;
+  bottom: -1rem;
+}
+
+.oMeniFoto::before {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: -2rem;
+  bottom: -2rem;
+  border: 2px solid #3D52D5;
+  z-index: -1;
+  transition: all .25s ease-out;
 }
 
 /* ------------- O meni -------------*/
@@ -448,18 +492,27 @@ footer p a:hover {
     flex-direction: column;
   }
 
+  .oMeniInfoText {
+    width: 100%;
+  }
+
   .oMeniFoto {
     margin: 2rem 0;
+    width: 100%;
+    scale: .5;
+    margin: 0 auto;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .top-navbar {
-    padding: .2rem 5%;
+  .topNavbar {
+    padding: .2rem 0;
+    justify-content: space-between;
   }
 
-  .top-navbar a {
+  .navLinks {
     font-size: 1.5rem;
+    margin: 0 1rem;
   }
 
   .returnToTheTop {
@@ -490,6 +543,10 @@ footer p a:hover {
     width: 90%;
   }
 
+  .catTitle {
+    text-align: left;
+    margin: 2rem 5%;
+  }
 
   .indexHeaderName {
     font-size: 5rem;
@@ -497,6 +554,23 @@ footer p a:hover {
 
   .indexHeaderText {
     font-size: 1.5rem;
+  }
+
+  footer {
+    width: 90%;
+  }
+
+  .oMeniInfoText {
+    width: 100%;
+  }
+
+  .contactLinks .fas,
+  .contactLinks .fab {
+    font-size: 1.5rem;
+  }
+
+  .contactLinks a {
+    font-size: 2rem;
   }
 
 }
