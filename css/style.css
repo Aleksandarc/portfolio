@@ -40,13 +40,18 @@
   left: 0;
 }
 
-.container {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
 body {
   overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3D52D5;
 }
 
 /* ------------- NAVBAR -------------*/
