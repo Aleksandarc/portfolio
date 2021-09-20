@@ -1,251 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleksandar Černjev</title>
+    <meta name="author" content="Aleksandar Černjev" />
+    <meta name="description" content="Web developer porfolio" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleksandar portfolio</title>
-  <meta name="author" content="Aleksandar Černjev">
-  <meta name="description" content="Web developer porfolio">
-  <link rel="stylesheet" href="./css/style.css">
+  <body>
+    <nav class="topnav">
+      <div class="topnav__logo">Aleksandar</div>
+      <ul class="topnav__ul">
+        <li class="topnav__li"><a href="#" class="topnav__a">Projekti</a></li>
+        <li class="topnav__li"><a href="#" class="topnav__a">O meni</a></li>
+        <li class="topnav__li"><a href="#" class="topnav__a">Veštine</a></li>
+        <li class="topnav__li"><a href="#" class="topnav__a">Kontakt</a></li>
+      </ul>
+    </nav>
 
-  <link rel="shortcut icon" href="./img/logo.svg" />
-</head>
+    <div class="other">
+      <img src="./img/mojKompshow.jpg" alt="mojKomp" class="otherImg" />
+      <p class="otherP">This is a text about image</p>
+    </div>
 
-<body>
-
-  <div class="topPos"></div>
-  <div class="topNavbar">
-    <ul class="navbar-list">
-      <li><a href="#projekti" class="projektiNav navLinks">Projekti</a></li>
-      <li><a href="#omeni" class="oMeniNav navLinks">O meni</a></li>
-      <li><a href="#kontakt" class="kontaktNav navLinks">Kontakt</a></li>
-    </ul>
-  </div>
-
-  <div class="container">
-    <div class="home mains">
-      <div class="homeContainer">
-        <div class="homeLeft">
-          <span class="homeText homeTextName">Aleksandar Černjev</span>
-          <span class="homeText">Fullstack Web Developer</span>
-          <a href="#projekti" class="homeTextBtn">Projekti</a>
-        </div>
-        <div class="homeRight">
-          <img src="./img/homeRight.svg" alt="Illustration">
-        </div>
+    <div class="landing">
+      <h1 class="landing__name">Aleksandar Černjev</h1>
+      <h2 class="landing__status">Fullstack Web developer</h2>
+      <div class="landing__buttons">
+        <button class="landing__projekti landing__button">Projekti</button>
+        <button class="landing__kontakt landing__button">Kontakt</button>
+      </div>
+      <div class="landing__bigball"></div>
+      <div class="landing__mediumball"></div>
+      <div class="landing__smallball"></div>
+      <div class="landing__scroll">
+        <p class="landing__scroll--text">Još</p>
+        <img src="./img/scroll.svg" alt="scroll down icon" />
       </div>
     </div>
 
-    <div class="mainProject mains" id="projekti">
-      <h2 class="catTitle projTitle">Projekti</h2>
-      <div class="projectContainer">
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/mojKompshow.jpg" alt="project1" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://moj-kompjuter.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/mojKompjuter" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Seminarski rad web prodavnice.</p>
-          <p class="projectInfo">Automatski generiše stranice za sve
-            proizvode. Poseduje admin stranicu gde je moguć CRUD korisnika i proizvoda.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>PHP</li>
-            <li>MYSQL</li>
-          </ul>
-        </div>
-
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj8show.jpg" alt="project1" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/8.Bin2Dec/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/8.Bin2Dec" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Jednostavan transformator iz binarnog u decimalni sistem.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-        </div>
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj6show.jpg" alt="project10" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/10.SurveyForm/"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/10.SurveyForm" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Jednostavan transformator iz binarnog u decimalni sistem.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-        </div>
-
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj1show.jpg" alt="project1" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/1.ArticleComponent/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/1.ArticleComponent" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-        </div>
-
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj2show.jpg" alt="projekat2" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/2.FourCard/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/2.FourCard" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj3show.jpg" alt="projekat3" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/3.IntroComponent/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/3.IntroComponent" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj4show.jpg" alt="projekat4" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/4.SinglePriceGrid/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/4.SinglePriceGrid" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <div class="projectCard">
-          <div class="cardTop">
-            <img src="./img/proj5show.jpg" alt="projekat5" class="projectImg">
-            <div class="projectCardLinks">
-              <a href="https://aleksandarc.github.io/smallProjects/5.BaseApparel/index.html"><i
-                  class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/Aleksandarc/smallProjects/tree/master/5.BaseApparel" target="_blank"><i
-                  class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <p class="projectInfoTitle">Projekat za licnu vezbu</p>
-          <p class="projectInfo">Vezba sa sajta frontendmentor.</p>
-          <ul class="projectLanguages">
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="mainOmeni mains" id="omeni">
-      <h2 class="catTitle">O meni</h2>
-      <div class="oMeniContainer">
-        <div class="oMeniInfo">
-          <div class="oMeniInfoTextContainer">
-            <p class="oMeniInfoText">Pozdrav! Moje ime je Aleksandar, student ITS-a iz Pančeva.</p>
-            <p class="oMeniInfoText"> Iako sam tek počeo učenje web dizajna, uživam u tome i
-              kreaciji responzivnih web sajtova.</p>
-            <p class="oMeniInfoText">Trenutno sam 3. godina na <strong><a
-                  href="https://www.its.edu.rs/">ITS-u</a></strong>, sa
-              završnim radom kao
-              poslednjom misijom. U poslednje vreme zanimanje mi je pravljenje različitih sitnih sajtova, kao i učenje
-              različitih web tehnologija.</p>
-            <p class="oMeniInfoText">Ovo su tehnologije koje trenutno poznajem:</p>
-          </div>
-          <p class="oMeniInfoText">
-            <ul class="languageList">
-              <li>HTML & CSS</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>WordPress</li>
-              <li>Linux</li>
-              <li>MySQL</li>
+    <div class="omeni">
+      <div class="omeni__container">
+        <h2 class="omeni__naslov">O meni</h2>
+        <div class="omeni__group">
+          <div class="omeni__paragrafwrap">
+            <p class="omeni__paragraf">
+              Pozdrav! Moje ime je Aleksandar, student ITS-a iz Pančeva.
+            </p>
+            <p class="omeni__paragraf">
+              Iako sam tek počeo učenje web dizajna, uživam u tome i kreaciji
+              web sajtova.
+            </p>
+            <p class="omeni__paragraf">
+              Trenutno sam 3. godina na
+              <a
+                href="https://www.its.edu.rs/"
+                target="_blank"
+                class="omeni__link"
+                >ITS-u</a
+              >, sa završnim radom kao poslednjom misijom. U poslednje vreme
+              zanimanje mi je pravljenje različitih sitnih sajtova, kao i učenje
+              različitih web tehnologija.
+            </p>
+            <p class="omeni__paragraf">
+              Ovo su tehnologije koje trenutno poznajem:
+            </p>
+            <ul class="omeni__tehnologije">
+              <li class="omeni__lista">HTML & CSS</li>
+              <li class="omeni__lista">PHP</li>
+              <li class="omeni__lista">Linux</li>
+              <li class="omeni__lista">JavaScript</li>
+              <li class="omeni__lista">WordPress</li>
+              <li class="omeni__lista">MySQL</li>
             </ul>
-          </p>
-        </div>
-        <div class="oMeniFoto"><img src="https://placebeard.it/550x550" alt="Licna fotografija">
-          <p>Slika je placeholder trenutno i menja se na refreshu.</p>
+          </div>
+          <div class="omeni__slika"></div>
         </div>
       </div>
     </div>
 
-    <div class="mainKontakt mains" id="kontakt">
-      <h2 class="catTitle">Kontakt</h2>
-      <div class="kontaktContainer">
-        <h3 class="catSubTitle">Kontaktirajte me</h3>
-        <p class="kontaktInfo">Ukoliko ste zaintresovani za saradnju, moji kontakt linkovi su:</p>
-        <div class="contactLinks">
-          <a href="https://www.linkedin.com/in/aleksandar-%C4%8Dernjev-59b8751b4/"><i
-              class="fab fa-linkedin-in"></i>Aleksandar Černjev</a>
-          <a href="mailto:aleksandarcernjev@gmail.com"><i class="fas fa-envelope"></i>aleksandarcernjev@gmail.com</a>
-        </div>
+    <div class="kontakt">
+      <h2 class="kontakt__naslov">Kontakt</h2>
+      <div class="kontakt__formcont">
+        <form action="" class="kontakt__form">
+          <div class="kontakt__form--input">
+            <label for="name">Vaše ime:</label>
+            <input type="text" name="Ime" />
+          </div>
+          <div class="kontakt__form--input">
+            <label for="email">Vaš kontakt email:</label>
+            <input type="text" name="email" />
+          </div>
+          <div class="kontakt__form--input">
+            <label for="message">Poruka:</label>
+            <textarea name="message"></textarea>
+          </div>
+          <input type="submit" class="kontakt__submit" value="Pošalji poruku" />
+        </form>
+        <p class="kontakt__warning">
+          Ova forma trenutno nije u funkciji, molim Vas kontaktirajte me preko
+          druge metode.
+        </p>
+      </div>
+      <div class="kontakt__socials">
+        <a
+          class="kontakt__links kontakt__linkedin"
+          href="https://www.linkedin.com"
+          target="_blank"
+        ></a>
+        <a class="kontakt__links kontakt__email" href="#"
+          ><img src="./img/email.svg" alt="emailLogo"
+        /></a>
       </div>
     </div>
 
-
-    <div class="returnToTheTop">
-      <img src="./img/returnToTop.svg" alt="Return to Top">
-    </div>
-    <footer>
-      <p><a href="https://github.com/Aleksandarc/portfolio" target="_blank">Designed & Build by Aleksandar Černjev</a>
-      </p>
-    </footer>
-
-  </div>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="./js/app.js"></script>
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>
